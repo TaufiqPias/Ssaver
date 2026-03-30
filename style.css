@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --primary: #10b981;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+  color: #f1f5f9;
+  line-height: 1.7;
+}
+
+header {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 4px solid #10b981;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1 {
+  font-family: "Bungee", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 18px 0 10px;
+  background: linear-gradient(180deg, #10b981, #aef3da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 12px;
+  padding: 10px 8px;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: #10b981;
+  border-bottom: 3px solid #10b981;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.qbox {
+  background: rgba(15, 23, 42, 0.7);
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 3px solid #10b981;
+  border-right: 3px solid #10b981;
+  font-size: 1rem;
+}
+
+.answer {
+  font-family: monospace;
+  font-size: 1.05rem;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #67e8f9;
+  white-space: nowrap;
+}
+
+.clues {
+  margin-top: 10px;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 8px;
+  border-radius: 6px;
+  color: #d2f50e;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.passage {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 6px;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  text-align: justify;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.grid_container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  background: #10b981;
+  color: #0f172a;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 20px 30px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  .section {
+    padding: 30px;
+  }
+  .qbox {
+    padding: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}
+
+/* Make tag questions more mobile friendly */
+ol {
+  padding-left: 20px;
+  font-size: 1.05rem;
+  line-height: 2.1;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+  .qbox {
+    padding: 16px;
+  }
+  .answer {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 4px 0;
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0febc6, #07804f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  text-align: center;
+  color: #f0f1ef;
+  border-bottom: 2px solid #e2cfb3;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.original {
+  background: #baf5e6;
+  padding: 12px 18px;
+  margin: 12px 0 16px 0;
+  border-left: 5px solid #138f7e;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5e6407;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.transformed {
+  background: #eef3ea;
+  padding: 8px 10px;
+  border-radius: 16px;
+  margin-top: 3px;
+  font-size: 1.1rem;
+  font-family: "Courier New", "Fira Code", monospace;
+  color: #1c4e2d;
+  border-left: 5px solid #48eb02;
+  font-weight: 700;
+}
